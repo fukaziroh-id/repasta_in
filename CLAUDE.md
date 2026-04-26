@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Repasta is a static marketing landing page for a laptop/PC repair service based in Padang, Indonesia. It drives customer acquisition via WhatsApp contact links. There is no backend, database, or API.
+Repasta is a static marketing landing page for a laptop/PC repair service based in Bandung, Indonesia. It drives customer acquisition via WhatsApp contact links. There is no backend, database, or API.
 
 ## Commands
 
@@ -30,12 +30,14 @@ Navbar → Hero → Services → Features → Testimonials → Pricing → CTA �
 Each section is a standalone component in `/components/`. All content (services, pricing, testimonials) is hardcoded inside the component files — there is no CMS or data layer.
 
 **Component layers:**
+
 - `/components/ui/` — Shadcn/ui primitives (Radix UI-based, do not modify manually; use `npx shadcn@latest add <component>` to add new ones)
 - `/components/*.tsx` — Page section components (navbar, hero, services, features, pricing, testimonials, cta, footer)
 - `/components/lenis-provider.tsx` — Wraps the app for smooth scrolling (Lenis)
 - `/components/theme-provider.tsx` — Wraps app for dark/light mode (next-themes)
 
 **Styling conventions:**
+
 - Tailwind utility classes with CSS custom properties (HSL color tokens defined in `app/globals.css`)
 - Dark mode via `.dark` class toggled by `next-themes`
 - Animations use Framer Motion for interactive elements; CSS keyframes (defined in `tailwind.config.ts`) for static ones
